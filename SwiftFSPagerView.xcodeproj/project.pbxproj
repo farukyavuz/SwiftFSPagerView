@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CBCDCA898BA54679634EF1B /* Pods_SwiftFSPagerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227AF7FCF4359E746C3C947A /* Pods_SwiftFSPagerView.framework */; };
 		EB8CB988203A23D10040F367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8CB987203A23D10040F367 /* AppDelegate.swift */; };
 		EB8CB98A203A23D10040F367 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8CB989203A23D10040F367 /* ViewController.swift */; };
 		EB8CB98D203A23D10040F367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB8CB98B203A23D10040F367 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		227AF7FCF4359E746C3C947A /* Pods_SwiftFSPagerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftFSPagerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96944D1AED6D4DB0132E9E60 /* Pods-SwiftFSPagerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFSPagerView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftFSPagerView/Pods-SwiftFSPagerView.debug.xcconfig"; sourceTree = "<group>"; };
+		C21A9832988315CBD0BBD5D7 /* Pods-SwiftFSPagerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFSPagerView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftFSPagerView/Pods-SwiftFSPagerView.release.xcconfig"; sourceTree = "<group>"; };
 		EB8CB984203A23D00040F367 /* SwiftFSPagerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftFSPagerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8CB987203A23D10040F367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB8CB989203A23D10040F367 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CBCDCA898BA54679634EF1B /* Pods_SwiftFSPagerView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F52E53B11E382CFA77B5EC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				227AF7FCF4359E746C3C947A /* Pods_SwiftFSPagerView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C54D83D4D79E4D9A73F1F1E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				96944D1AED6D4DB0132E9E60 /* Pods-SwiftFSPagerView.debug.xcconfig */,
+				C21A9832988315CBD0BBD5D7 /* Pods-SwiftFSPagerView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EB8CB97B203A23D00040F367 = {
 			isa = PBXGroup;
 			children = (
 				EB8CB986203A23D00040F367 /* SwiftFSPagerView */,
 				EB8CB985203A23D00040F367 /* Products */,
+				C54D83D4D79E4D9A73F1F1E3 /* Pods */,
+				6F52E53B11E382CFA77B5EC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB8CB996203A23D10040F367 /* Build configuration list for PBXNativeTarget "SwiftFSPagerView" */;
 			buildPhases = (
+				73627BBC9385C0500B5F168A /* [CP] Check Pods Manifest.lock */,
 				EB8CB980203A23D00040F367 /* Sources */,
 				EB8CB981203A23D00040F367 /* Frameworks */,
 				EB8CB982203A23D00040F367 /* Resources */,
+				4ADBC59C65FEBBC828FD7C01 /* [CP] Embed Pods Frameworks */,
+				546E37FBB08832518E2710CE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4ADBC59C65FEBBC828FD7C01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftFSPagerView/Pods-SwiftFSPagerView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftFSPagerView/Pods-SwiftFSPagerView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		546E37FBB08832518E2710CE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftFSPagerView/Pods-SwiftFSPagerView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73627BBC9385C0500B5F168A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftFSPagerView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB8CB980203A23D00040F367 /* Sources */ = {
@@ -272,11 +353,13 @@
 		};
 		EB8CB997203A23D10040F367 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96944D1AED6D4DB0132E9E60 /* Pods-SwiftFSPagerView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TC7KWC68P6;
 				INFOPLIST_FILE = SwiftFSPagerView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.faruk.SwiftFSPagerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,11 +370,13 @@
 		};
 		EB8CB998203A23D10040F367 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C21A9832988315CBD0BBD5D7 /* Pods-SwiftFSPagerView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TC7KWC68P6;
 				INFOPLIST_FILE = SwiftFSPagerView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.faruk.SwiftFSPagerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
